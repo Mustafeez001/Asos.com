@@ -1,0 +1,151 @@
+
+/* navbar section  */
+/* nav1 */
+#nav1{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    border: 0px solid red ;
+  background-color:lightslategrey;
+}
+#nav1>div {
+    border: 0px solid black;
+    margin: auto;
+}
+ #nav1>div:nth-child(1) {
+   width: 30%;
+   height: 100%;
+   display: flex;
+   justify-content: space-evenly;
+ 
+  
+ 
+}
+#nav1>div:nth-child(1)>div {
+   border: 0px solid blue;
+   width: 100%;
+   height: 100%;
+ 
+   
+ }
+ #nav1>div:nth-child(1)>div:hover {
+    border: 1px solid blue;
+   background-color: gray;
+  
+    
+  }
+
+ #nav1>div:nth-child(1)>div>img{
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+    
+  }
+
+  #nav1>div:nth-child(1)>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #fff;
+    font-size: 18px;  
+      
+    }
+
+#nav1>div:nth-child(2) {
+    width: 50%;
+    height: 100%;
+    padding: 10px 20px;
+ 
+ }
+ #query{
+    width: 90%;
+    
+    height: 60%;
+    border-radius: 15px;
+    border: 0px solid gray;
+    padding-left: 20px;
+   
+   
+ }
+
+ #nav1>div:nth-child(3) {
+    width: 15%;
+    height: 55%;
+    display: flex;
+    justify-content:space-evenly;
+    
+ }
+
+ /* nav2   */
+ #nav2{
+    display: flex;
+   
+    border: 0px  solid red ;
+    background-color: rgb(94, 87, 87);
+ }
+ #nav2>div {
+    padding: 15px 12px;
+    border: 0px solid black;
+    color: #fff;
+ }
+ #nav2>div:hover {
+    background-color: #fff;
+    color: black;
+ }
+#red1{
+    margin-left: 25px;
+    font-weight: bold;
+    background-color: rgb(231, 23, 23);
+}
+
+#red2{
+    
+    font-weight: bold;
+    background-color: rgb(231, 23, 23);
+}
+
+ /* nav3  */
+
+
+ #nav3{
+    display: flex;
+    width: 100%;
+    height: 60px;
+  
+ }
+ #nav3>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    border: 0px solid red ;
+    font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+ 
+   
+ }
+
+ #nav3>div:nth-child(1) {
+    background-color: rgb(244, 67, 67);
+   
+ }
+ #nav3>div:nth-child(2) {
+    background-color:black;
+    color: #fff;
+   
+ }
+
+ #nav3>div>h3 {
+    width: 45%;
+   border: 0px solid black;
+   text-align: center;
+ }
+
+
+
+   
+
+
+
+ 
