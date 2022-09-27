@@ -31,6 +31,7 @@
  #nav1>div:nth-child(1)>div:hover {
     border: 1px solid blue;
    background-color: gray;
+   cursor: pointer;
   
     
   }
@@ -92,6 +93,7 @@
  #nav2>div:hover {
     background-color: #fff;
     color: black;
+    cursor: pointer;
  }
 #red1{
     margin-left: 25px;
