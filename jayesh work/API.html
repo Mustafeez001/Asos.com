@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<input type="text" id="query" placeholder="Search here">
+    <button id="Tsearch">Search</button>
+    <div id="container"></div>   
+
+</html>
+<script>
+    const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'a1cbc69aa1msh8ab472a0fa63a26p1dc2b1jsne9c66d5f4a05',
+		'X-RapidAPI-Host': 'kohls.p.rapidapi.com'
+	}
+};
+async function data(){
+
+let mydata= await fetch('https://kohls.p.rapidapi.com/categories/list', options)
+	mydata= await mydata.json();
+    console.log(mydata)
+}
+data()
+</script>
