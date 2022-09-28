@@ -1,0 +1,94 @@
+/* thi is the landing page css  worked by Anup Das */
+
+
+#offer_banner{
+    width: 100%;
+    height: 120px;
+    border: 1px solid teal;
+    background-color: rgb(156, 240, 224);
+    cursor: pointer;
+}
+#offer_banner>div{
+    border: 0px solid red;
+    width: 50%;
+    margin: auto;
+    margin-top: 40px;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(156, 240, 224);
+    font-family: 'Fira Sans', sans-serif;
+    cursor: pointer;
+}
+#offer_banner>div>p{
+    font-size: 12px;
+}
+#main_banner{
+    margin: auto;
+    width: 100%;
+    border: 1px solid teal;
+    height: 637px;
+    background: url(https://content.asos-media.com/-/media/homepages/ww/2022/sept/12/hero/topshop/topshop_ww-hp-hero_desktop.jpg);
+    background-repeat: no-repeat;
+    background-position: 58%;
+    cursor: pointer;
+}
+#main_banner>div{
+    border: 0px solid red;
+    width: 200px;
+    margin: auto;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+    cursor: pointer;
+}
+#main_banner>div:hover{
+    cursor: pointer;
+}
+#main_banner>div:nth-child(1){
+    background-color: white;
+    margin-top: 400px;
+}
+#main_banner>div:nth-child(1):hover{
+    cursor: pointer;
+}
+#main_banner>div:nth-child(2)>button{
+    border: none;
+    width: 100%;
+    padding: 10px;
+    font-size: large;
+    font-family: 'Fira Sans', sans-serif;
+    cursor: pointer;
+}
+#main_banner>div:nth-child(2)>button:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+#four_product{
+    width: 100%;
+    border: 0px solid teal;
+    height: 450px;
+    display: flex;
+    margin: auto;
+    margin-top: 15px;
+}
+#four_product>div{
+    width: 22%;
+    height: auto;
+    border: 0px solid red;
+    margin: auto;
+    justify-content: space-evenly;
+}
+#four_product>div>img{
+    width: 100%;
+}
+#four_product>div>h3{
+    margin-top: 5px;
+    text-align: center;
+}
+#four_product>div>p{
+    margin-top: -12px;
+    text-align: center;
+}
