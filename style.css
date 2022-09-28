@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footer-container{
+    background-color: #dbdada;
+   
+}
+.footer{
+    width: 80%;
+    height: 30vh;
+    background-color: #dbdada;
+    color:  #666666;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    
+}
+
+.footer-heading{
+    display: flex;
+    flex-direction: column;
+    margin-right: 4rem;
+    font-size: 10px;
+}
+
+.footer-heading h2{
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    font-size: 13px;
+}
+.footer-heading a{
+    color: 
+    #666666;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.footer-heading a:hover {
+    color: rgba(0, 123, 255, 0.872);
+}
+
+.footer-bottom{
+    display: flex;
+    font-size: 10px;
+    padding-top: 20px;
+    background-color:#cfcbcbe4;
+    height: 50px;
+    margin-top: 10px;
+    color:#666666 ;
+    
+}
+.footer-bottom>p{
+    margin-left: 175px;
+    margin-right:502px;
+
+}
+.footer-bottom a{
+    color: #666666;
+    text-decoration: none;
+}
+.footer-bottom a:hover{
+    color: rgba(0, 123, 255, 0.872);
+}
+
+.footer-logo{
+    display: flex;
+   
+    height: 30px;
+    background-color: white
+}
+
+#payment-logo{
+    width: 200px;
+   
+    margin: 0%;
+    padding: 0%;
+    margin-top: 0%;
+    
+}
+#payment-logo>img{
+    width: 75%;
+    margin-left: 10%;
+    margin-top: 5px;
+}
+#social-logo{
+    width: 150px;
+    margin-top: 4px;
+    margin-bottom: 1px;
+    margin-left: 35%;
+   
+    
+}
+#social-logo>img{
+   margin-right: 20px;
+
+width: 15%;
+}
+#dash{
+    margin-top: 5px;
+    margin-right: 30px;
+}
+.footer-brandlogo{
+    background-color: white;
+}
+.footer-brandlogo>h1{
+  display: grid;
+    justify-content: center;
+    font-size: 20px;
+}
+.brand-logo{
+    display: flex;
+   width: 100%;
+background-color: white;
+    
+    margin-left: 20%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.brand-logo>img{
+    display: grid;
+    justify-content: center;
+    width: 10%;
+   
+}
