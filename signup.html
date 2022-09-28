@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="./styles/signup.css">
+   
+ 
+</head>
+<body>
+    <div id="Mimgdiv">
+
+        <img src="https://my.asos.com/Content/images/asos-logo-2022-93x28.png" alt="" srcset="">
+    </div>
+    <div id="Mj">
+        <div>JOIN</div>
+        
+        <div>SIGN IN</div>
+    </div>
+
+    <!-- <h3>SIGN UP WITH</h3> -->
+    <div id="Mbox1">
+        <h3>SIGN UP WITH...</h3>
+        <div id="Mmain">
+        <!-- <h3>SIGN UP WITH</h3>  -->
+
+
+        <div>GOOGLE</div>
+        <div>APPLE</div>
+        <div>FACEBOOK</div>
+        
+       </div>
+      </div> 
+
+      <p>Signing up with social is super quick. No extra passwords to remember - no brain fail<br>
+         Don't worry, we'd never share any of your data or post anything on your behalf #notevil</p>
+   <div id="navbar"></div> 
+  <!-- <div id="navbar21"></div> -->
+    <div id="box">
+        
+          
+            <form action="">
+              <div id="form-first">
+                <h2>OR SIGN UP WITH EMAIL</h2>
+               
+ 
+                 <h3>EMAIL ADDRESS:</h3>  
+
+             <input type="email" class="input_box" id="email" placeholder="">
+            
+
+             <h3>FIRST NAME:</h3>
+
+            <input type="text" class="input_box" id="name" placeholder="">
+            
+             <h3>LAST NAME:</h3>
+            <input type="text" class="input_box" id="name2" placeholder="">
+
+             <h3>PASSWORD:</h3>
+            <input type="password" class="input_box" id="password" placeholder="Enter Password">
+
+           <h3>DATE OF BIRTH:</h3>
+           <input type="date" class="input_box" id="birthday" name="BIRTHDAY"> <br>
+           
+                          
+                        
+        
+          <input type="submit"  id="submit" value="JOIN ASOS">
+            </div>
+        </div>
+
+    </div>
+</form>
+      
+  </body>
+</html>
+       
+
+
+<script type="module">
+
+
+let userArr = JSON.parse(localStorage.getItem("signup")) || [];
+let Signup = (e) => {
+  e.preventDefault();
+  
+  let name = document.getElementById("name").value;
+
+  let email = document.getElementById("email").value;
+
+  let pass = document.getElementById("password").value;
+  
+
+  if (name == "" || email == "" || pass == "") {
+    alert("Please Fill All Details");
+  } else {
+    class user {
+      password;
+      constructor(n, email) {
+        this.name = n;
+      }
+
+      signup(email, password) {
+        let isvalidated = false;
+
+        isvalidated =
+          this.#validateemail(email) && this.#validatepass(password);
+
+        if (isvalidated) {
+          this.email = email;
+          this.password = password;
+          alert("User Registered successfully");
+          userArr.push(this);
+          localStorage.setItem("signup", JSON.stringify(userArr));
+          window.location.href = "login.html"
+                // log in page will be added here .
+        } else {
+          alert("please follow username and password rules");
+        }
+      }
+      #validateemail(email) {
+        return true;
+      }
+
+      #validatepass(password) {
+        return true;
+      }
+    }
+    let user1 = new user(name);
+
+    user1.signup(email, pass);
+
+    console.log(user1);
+  }
+};
+
+let form = document.querySelector("form");
+form.addEventListener("submit", Signup);
+
+ </script>

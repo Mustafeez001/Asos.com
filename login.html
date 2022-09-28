@@ -4,16 +4,205 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login page</title>
-    <link rel="stylesheet" href="/styles/navbar.css">
-    <link rel="stylesheet" href="/styles/login.css">
+    <title>Login</title>
+  
 </head>
-<body>
-    <div id="navbar"></div>
-    <h3>This is login page</h3>
 
+<style>
+  .input_box1{
+     position: relative;
+     left: 60px;
+     text-align: left;
+     justify-content: space-around;
+     /* /* margin: auto; */
+     align-items:baseline;
+  }
+  input{
+      margin-top: 0px;
+      margin-left: 30px;
+      width: 250px;
+      height: 30px;
+      margin-bottom: 2px;
+      outline: none;
+      font-size: 14px;
+      padding: 10px;
+  }
+  /* form{
+    margin: auto;
+  } */
+  
+  #submit1{
+      position: relative;
+      left: 17%;
+      padding: 10px;
+      margin-top: 20px;
+      width: 90%;
+      height: 40px;
+      margin-left: 40px;
+      /* border-radius: 7px; */
+      color:white;
+      background-color:rgb(45,45,45); 
+      font-size: 20px;
+      border: none;
+      cursor: pointer; 
+      /* margin: auto; */
+      /* margin: auto; */
+  }
+  #submit1:hover{
+      background-color:#d41f1f;
+  }
+  h3{
+      position: relative;
+      margin-left: 90px;
+      font-size: 15px;
+      color: rgb(130,146,161);
+  }
+  h2{
+    text-align: center;
+    position: relative;
+    left: 5px;
+  }
+  #part{
+    display: grid;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  #last{
+    position: relative;
+    text-align: center;
+    left: 90px;
+  }
+  #last>a{
     
-    
+  pointer-events: none;
+
+  }
+</style>
+
+<body>
+    <!-- <div id="kau_navbar"></div> -->
+    <!-- <div id="navbar"></div>
+    <div id="navbar21"></div>
+    <input type="checkbox" id="show"> -->
+
+    <div id="login">
+      <form action="">
+     
+        <div id="part">
+           
+            <h2>SIGN IN</h2>
+           
+            <h3>EMAIL ADDRESS:</h3>  
+
+            <input type="email" class="input_box1" id="email1" placeholder="">
+           
+            <h3>PASSWORD:</h3>
+
+            <input type="password" class="input_box1" id="password" placeholder="Enter Password"><br>
+            <!-- <button id="btn">Login</button> -->
+            <input type="submit"  id="submit1" value="SIGN IN">
+        </div>
+        <br>
+           
+
+        <div id="last">
+            <a href="">Forgot password?</a>
+            <a href="signup.html"> </a>
+        </div>
+
+      </form>
+        
+    </div>
 </body>
 </html>
-<script type="module" src="/script/index.js"></script>
+
+<script type="module">
+
+
+
+let loginxxx = localStorage.getItem('login');
+    if(loginxxx==='true'){
+        let loginData = JSON.parse( localStorage.getItem('logdata'))||[];
+    document.querySelector('#loginsignup').innerHTML = `<img src = 'https://www.kindmeal.my/images/icon_notice.png'>
+		<p style = 'color: rgb(125, 123, 123);'>${loginData[0].name}</p>
+		<img src = 'https://www.kindmeal.my/images/no_photo_header.png'>
+        <button id='logout'>Log Out</button>`;
+    }else if(loginxxx==='false'){
+        
+    }
+
+</script>
+
+<script>
+    
+   function gotoindex(){
+    window.location.href="index.html";
+   }
+
+// let logArr=JSON.parse(localStorage.getItem("logdata"))||[]
+let logArr = [];
+ let  userArr=JSON.parse(localStorage.getItem("signup"))
+
+
+let flag = false;
+let login = (e) => {
+  e.preventDefault();
+
+  if(userArr==null){
+    alert('Hey!! Your new user please Sign up First');
+    window.location.href="signup.html"
+}
+  let email = document.getElementById("email1").value;
+  let pass = document.getElementById("password").value;
+
+  if(email=="" ||pass==""){
+    alert("Please Fill All Details")
+  }else{
+    userArr.map((ele)=>{
+  class user {
+    password;
+    constructor(n, email) {
+      this.name = n;
+    }
+
+    signup(email, password) {
+        this.email = email;
+        this.password = password;
+      }
+
+      login(email, pass) {
+        if (email == this.email && pass == this.password) {
+          flag = true;
+          logArr.push(this);
+         localStorage.setItem("logdata",JSON.stringify(logArr));
+         localStorage.setItem('login',true);
+        } 
+      }
+    
+  }
+  console.log(ele)
+   
+  let user1 = new user(ele.name);
+  user1.signup(ele.email, ele.password);
+  user1.login(email, pass);
+  
+  console.log(user1);
+
+});
+if(flag==true){
+    alert("logged in sucessfully!!");
+    window.location.href="./index.html";
+
+  }else{
+    alert("login failed,Your Data not Found");
+    window.location.href="./signup.html"
+  }
+}
+};
+
+
+let form = document.querySelector("form");
+form.addEventListener("submit", login);
+
+</script>
