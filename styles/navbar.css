@@ -36,8 +36,8 @@
     
   }
 
- #nav1>div:nth-child(1)>div>img{
-  width: 100%;
+ #nav1>div:nth-child(1)>div>a>img{
+  width: 69%;
   height: 100%;
   padding: 15px;
     
@@ -70,7 +70,7 @@
    
  }
 
- #nav1>div:nth-child(3) {
+ #nav1>div:nth-child(3)>a {
     width: 15%;
     height: 55%;
     display: flex;

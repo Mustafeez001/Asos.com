@@ -1,18 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>projetc</title>
-    <link rel="stylesheet" href="../styles/navbar.css">
-</head>
-<body>
 
-    <div id="navbar"></div>
-    <!-- Navbar Section  -->
- 
-<div id="nav1">
+function navbar(){
+
+    return`
+    <div id="nav1">
     <div>
         <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ_ORaNu1Id6gnw73nLdy2Fnsifg0aXwQI7sUbB68M&s" alt=""></div>
     <div>WOMAN</div>
@@ -53,9 +43,7 @@
         <h3>FREE WORLDWIDE DELEVERY</h3>
     </div>
 </div>
-
-    </div> -->
     
-</body>
-</html>
-<script type="module" src="../script/index.js"></script>
+    `
+}
+export default navbar;
