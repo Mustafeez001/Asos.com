@@ -6,9 +6,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <style>
+        #offer_banner{
+            width: 100%;
+            height: 120px;
+            border: 1px solid teal;
+            background-color: rgb(156, 240, 224);
+            cursor: pointer;
+        }
+        #offer_banner>div{
+            border: 0px solid red;
+            width: 50%;
+            margin: auto;
+            margin-top: 40px;
+            font-size: 40px;
+            font-style: italic;
+            font-weight: bold;
+            text-align: center;
+            background-color: rgb(156, 240, 224);
+            font-family: 'Fira Sans', sans-serif;
+            cursor: pointer;
+        }
+        #offer_banner>div>p{
+            font-size: 12px;
+        }
+        #main_banner{
+            margin: auto;
+            width: 100%;
+            border: 1px solid teal;
+            height: 637px;
+            background: url(https://content.asos-media.com/-/media/homepages/mw/2022/sept/12/topman/updated-assets/topman_hp-hero_desktop.jpg);
+            background-repeat: no-repeat;
+            background-position: 58%;
+            cursor: pointer;
+        }
+        #main_banner>div{
+            border: 0px solid red;
+            width: 200px;
+            margin: auto;
+            text-align: center;
+            font-size: 50px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        #main_banner>div:hover{
+            cursor: pointer;
+        }
+        #main_banner>div:nth-child(1){
+            background-color: white;
+            margin-top: 400px;
+        }
+        #main_banner>div:nth-child(1):hover{
+            cursor: pointer;
+        }
+        #main_banner>div:nth-child(2)>button{
+            border: none;
+            width: 100%;
+            padding: 10px;
+            font-size: large;
+            font-family: 'Fira Sans', sans-serif;
+            cursor: pointer;
+        }
+        #main_banner>div:nth-child(2)>button:hover{
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+        #four_product{
+            width: 100%;
+            border: 1px solid teal;
+            height: 450px;
+            display: flex;
+            margin: auto;
+            margin-top: 15px;
+        }
+        #four_product>div{
+            width: 22%;
+            height: auto;
+            border: 1px solid red;
+            margin: auto;
+            justify-content: space-evenly;
+        }
+        #four_product>div>img{
+            width: 100%;
+        }
+        #four_product>div>h3{
+            margin-top: 5px;
+            text-align: center;
+        }
+        #four_product>div>p{
+            margin-top: -12px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+    <!-- navbar append here using import export -->
     <div id="navbar"></div>
+    <!-- actual code start from here -->
+    <div id="offer_banner">
+        <div><span>  UP TO 50% OFF COSY GARMS</span>
+        <p>Limited time only. Selected styles marked down as shown.</p></div>
+    </div>
+    <div id="main_banner">
+        <div><span>Topman</span></div>
+        <div><button>Shop now</button></div>
+    </div>
+    <div id="four_product">
+        <div>
+            <img src="https://content.asos-media.com/-/media/homepages/mw/2022/sept/26/moments/mw_warm_handle_moment_870x1110-v3.png" alt="">
+            <h3>ASOS DESIGN COSY</h3>
+            <p>For fluff's sake</p>
+        </div>
+        <div><img src="https://content.asos-media.com/-/media/homepages/mw/2022/sept/26/moments/mw_global_winter_essentials_moment_870x1110.jpg" alt="">
+            <h3>WINTER NEUTRALS</h3>
+            <p>Beige ain't boring	</p></div>
+        <div><img src="https://content.asos-media.com/-/media/homepages/mw/2022/sept/26/moments/mw_weekday_moment_870x1110.jpg" alt="">
+            <h3>WEEKDAY</h3>
+            <p>Cold-weather wins</p></div>
+        <div><img src="https://content.asos-media.com/-/media/homepages/mw/2022/sept/26/moments/mw_retro_day_and_night_moment_870x1110-2.jpg" alt="">
+            <h3>DISCO NOSTALGIA</h3>
+            <p>It's a trip</p></div>
+    </div>
+    <div id=""></div>
+
     
 </body>
 </html>
