@@ -89,6 +89,42 @@
     text-align: center;
 }
 #four_product>div>p{
-    margin-top: -12px;
+    margin-top: 6px;
     text-align: center;
+}
+#two_div{
+    width: 100%;
+    margin-top: 40px;
+    border: 0px solid red;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+#two_div>div{
+    border: 0px solid teal;
+    width: 440px;
+    /* height: 610px; */
+}
+#two_div>div>img{
+    width: 100%;
+}
+#two_div>div>h2{
+margin-top: 10px;
+}
+#two_div>div>p{
+    font-family: sans-serif;
+    font-weight: 800;
+    margin-top: 10px;
+}
+#two_div>div>button{
+    margin-top: 10px;
+    padding: 10px;
+    width: 180px;
+    height: 50px;
+    border: 2px solid black;
+}
+#two_div>div>button:hover{
+    background-color: black;
+    color: white;
+    
 }

@@ -6,7 +6,8 @@
     height: 60px;
     display: flex;
     border: 0px solid red ;
-  background-color:lightslategrey;
+  /* background-color:#474747; */
+  background-color:#000000e3;
 }
 #nav1>div {
     border: 0px solid black;
@@ -36,8 +37,8 @@
    
  }
  #nav1>div:nth-child(1)>div:hover {
-    border: 1px solid blue;
-   background-color: gray;
+    border: 0px solid blue;
+   background-color:#666666;
    cursor: pointer;
   
     
@@ -91,6 +92,10 @@
 
    
 }
+#nav1>div:nth-child(3)>a>img{
+   background-color: white;
+    border-radius: 20px;
+}
 
 
  /* nav2   */
@@ -98,7 +103,7 @@
     display: flex;
    
     border: 0px  solid red ;
-    background-color:gray;
+    background-color:#474747;
     color: #FFFFFF;
     font-family: sans-serif;
  }
