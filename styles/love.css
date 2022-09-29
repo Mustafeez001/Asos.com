@@ -22,7 +22,7 @@
     /* border: 1px solid red; */
 }
 .SDiv{
-    display: flex;
+      display: flex;
     justify-content:space-between;
 }
 .Slove{

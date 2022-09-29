@@ -16,7 +16,8 @@ const appendSloveData=()=>{
 
 
     ch.forEach((el) => {
-        //console.log('el',el)
+        
+        console.log('el',el)
         let div = document.createElement("div");
         div.setAttribute("id", "Tcard")
 
