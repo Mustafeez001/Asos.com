@@ -1,31 +1,110 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            /* border: 4px solid yellow; */
+            padding: 30px;
+            width: 90%;
+            margin: auto;
+        }
+
+        #Tcard {
+            /* border:  1px solid green ; */
+            padding: 20px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+
+        }
+
+        .Tproimg {
+            width: 250px;
+            height: 280px;
+            /* border: 1px solid red; */
+        }
+
+        @media only screen and (max-width: 768px) {
+            #container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media only screen and (max-width: 320px) {
+                #container {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+        }
+    </style>
 </head>
+
 <body>
-    
+
 </body>
 <input type="text" id="query" placeholder="Search here">
-    <button id="Tsearch">Search</button>
-    <div id="container"></div>   
+<button id="Tsearch">Search</button>
+<div id="container"></div>
 
 </html>
 <script>
-    const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'a1cbc69aa1msh8ab472a0fa63a26p1dc2b1jsne9c66d5f4a05',
-		'X-RapidAPI-Host': 'kohls.p.rapidapi.com'
-	}
-};
-async function data(){
+    const APIKIY = `sjYjaQYJg7twCbi4Lj3gr51ujbvUxshEKI3HsvYG5H4`
 
-let mydata= await fetch('https://kohls.p.rapidapi.com/categories/list', options)
-	mydata= await mydata.json();
-    console.log(mydata)
-}
-data()
+    let gallery = document.getElementById("container") //adich
+
+    let buttonSearch = document.getElementById("Tsearch");
+    buttonSearch.addEventListener("click", function () {
+        data()
+    })
+    const data = async () => {
+        try {
+            let searchParam = document.getElementById("query").value;
+            let res = await fetch(`https://api.unsplash.com/search/photos?client_id=${APIKIY}&query=${searchParam}&per_page=20`)
+            let data = await res.json()
+            // console.log(data.results);
+            let final_data = data.results
+            // console.log(final_data);
+            display(final_data)
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    const display = (data) => {
+        gallery.innerHTML = null;
+        data.forEach((el) => {
+            console.log(el)
+            let div = document.createElement("div");
+            div.setAttribute("id", "Tcard")
+
+            const img = document.createElement('img');
+            img.src = el.urls.small;
+            img.setAttribute("class", "Tproimg");
+
+
+            const heading = document.createElement("h5");
+            heading.innerText = el.alt_description;
+            heading.setAttribute("class", "Tproh");
+
+            const bun = document.createElement("p")
+            bun.innerText = "price 30$";
+
+            // const price= document.createElement("p")
+            // heading.innerText="price is --";
+
+            // heading.setAttribute("class","Tpropri");
+
+
+
+            div.append(img, heading, bun)
+            gallery.append(div)
+        });
+    }
+
 </script>
+
