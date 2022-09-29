@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>women2 jayesh</title>
+    <style>
+        #container{
+            display: grid; 
+             grid-template-columns: repeat(4,1fr);
+             gap: 10px;
+             width: 80%;
+             margin: auto;
+
+        }
+        #Tid{
+           
+            padding: 20px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+        }
+        .Timag{
+            width: 180px;
+            height: 200px;
+        }
+        @media only screen and (max-width: 768px) {
+            #container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media only screen and (max-width: 320px) {
+                #container {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+ <div id="container"></div>
+
+</body>
+</html>
+<script>
+    let box = document.getElementById("container");
+    const dataArr= async()=>{
+        try {
+            let res = await fetch(`https://fakestoreapi.com/products/category/women's clothing`)
+            let data1= await res.json()
+            let actual_data=data1
+            console.log(actual_data);
+            display(actual_data)
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    dataArr()
+
+const display= (data1)=>{
+data1.forEach((el) => {
+    // console.log("bang");
+    let div = document.createElement("div");
+    div.setAttribute("id","Tid")
+
+    let imag =document.createElement("img")
+    imag.src=el.image
+    imag.setAttribute("class","Timag")
+
+    let htag= document.createElement("h6")
+    htag.innerText=el.title
+    htag.setAttribute("class","Thtag")
+
+    let price= document.createElement("h6")
+    price.innerText=`${el.price} $`
+
+
+    div.append(imag,htag,price)
+    box.append(div)
+});
+}
+</script>
