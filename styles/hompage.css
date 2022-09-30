@@ -60,6 +60,7 @@
     font-size: large;
     font-family: 'Fira Sans', sans-serif;
     cursor: pointer;
+    
 }
 #main_banner>div:nth-child(2)>button:hover{
     background-color: black;
