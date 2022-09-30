@@ -37,6 +37,15 @@
             width:50px ;
         }
 
+        .Slove:hover {
+        border: 2px solid green;
+        color: brown;
+        border-radius: 50%;
+        padding: 5px;
+ 
+   
+}
+
         @media only screen and (max-width: 768px) {
             #container {
                 grid-template-columns: repeat(2, 1fr);
@@ -128,6 +137,16 @@
         let ch= JSON.parse(localStorage.getItem('loove')) || [];
         ch.push(data);
         localStorage.setItem('loove',JSON.stringify(ch))
+
+    }
+    let query=document.getElementById('Tsearch');
+    query.addEventListener('click',()=>{
+        SearchItems()
+
+    })
+
+    const SearchItems=()=>{
+        window.location.href='API.html'
 
     }
 

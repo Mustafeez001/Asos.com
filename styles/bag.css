@@ -1,0 +1,51 @@
+
+#Sbag_body{
+    display: flex;
+    width: 75%;
+    margin: auto;
+}
+#Sbag_body>div:nth-child(1) {
+  width: 60%;
+  border: 1px solid red ;
+  margin-top:20px;
+  margin-right: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+#Sbag_body>div:nth-child(2) {
+    width: 40%;
+    border: 1px solid red ;
+    margin-top:20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+
+  #Sleft>div:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    border-bottom: 2px solid gray;
+  }
+
+  .Sdata{
+    display: flex;
+    border: 0px solid black;
+    margin: 20px;
+  }
+ 
+   .Simage{
+    width: 30%;
+    padding: 10px;
+    border: 0px solid red;
+   
+  }
+
+  .Simage>img {
+  width: 100%;
+   
+  }
+  .SDiv{
+    width: 70%;
+    padding: 20px;
+    border: 0px solid red ;
+
+  } 
+ 
