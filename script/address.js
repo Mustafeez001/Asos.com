@@ -81,7 +81,7 @@ let data=JSON.parse(localStorage.getItem('sign')) || [];
         let placed_btn=document.createElement('button');
         placed_btn.innerText='Confrim';
     placed_btn.addEventListener('click',()=>{
-        window.location.href='../index/payment.html'
+        window.location.href='payment.html'
 
     })
         div_btn.append(change_btn,placed_btn)

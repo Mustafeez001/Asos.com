@@ -57,5 +57,5 @@ total_price.innerHTML=`${Sprice}$`;
 
 let Scheck_btn=document.getElementById('Scheck_btn');
 Scheck_btn.addEventListener('click',()=>{
-    window.location.href='../index/address.html'
+    window.location.href='address.html'
 })
