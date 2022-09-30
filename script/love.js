@@ -17,7 +17,7 @@ const appendSloveData=()=>{
 
     ch.forEach((el) => {
         
-        console.log('el',el)
+      //  console.log('el',el)
         let div = document.createElement("div");
         div.setAttribute("id", "Tcard")
 
@@ -44,14 +44,24 @@ const appendSloveData=()=>{
             SdeleteItems(el.id)
 
         })
+        let move_btn=document.createElement('button');
+        move_btn.innerText=' MOVE TO BAG';
+        move_btn.setAttribute('class','Smove');
+        move_btn.addEventListener('click',()=>{
+            SmoveItens(el)
+        })
+
+
         Sdiv.append(bun,Sbtn)
-        div.append(img, heading, Sdiv)
+        div.append(img, heading, Sdiv,move_btn)
         SloveData.append(div)
     })
 }
 
 
 appendSloveData()
+
+///delete function 
 const SdeleteItems=(id)=>{
     let ch= JSON.parse(localStorage.getItem('loove')) || [];
     ch=ch.filter((el)=>{
@@ -63,3 +73,14 @@ const SdeleteItems=(id)=>{
 
 
 }
+// to add the items in the bag
+const  SmoveItens=(el)=>{
+    let data= JSON.parse(localStorage.getItem('Sremove')) || [];
+    data.push(el);
+    localStorage.setItem('Sremove',JSON.stringify(data))
+
+    let Scount=document.getElementById('Scount');
+    Scount.innerHTML=data.length;
+}
+
+
