@@ -78,9 +78,26 @@ const  SmoveItens=(el)=>{
     let data= JSON.parse(localStorage.getItem('Sremove')) || [];
     data.push(el);
     localStorage.setItem('Sremove',JSON.stringify(data))
+    CoutItems()
+   
+}
 
+
+function CoutItems(){
+    let data= JSON.parse(localStorage.getItem('Sremove')) || [];
     let Scount=document.getElementById('Scount');
     Scount.innerHTML=data.length;
+    
+   localStorage.setItem('count',data.length)
+   addprice()
 }
+
+function addprice(){
+    let data= JSON.parse(localStorage.getItem('count'))
+   let Sperice=data*30;
+   localStorage.setItem('price',Sperice)
+
+}
+
 
 

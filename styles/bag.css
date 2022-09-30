@@ -6,14 +6,15 @@
 }
 #Sbag_body>div:nth-child(1) {
   width: 60%;
-  border: 1px solid red ;
+  border: 0px solid red ;
   margin-top:20px;
   margin-right: 20px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 #Sbag_body>div:nth-child(2) {
     width: 40%;
-    border: 1px solid red ;
+    height: 250px;
+    border: 0px solid red ;
     margin-top:20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   }
@@ -48,4 +49,33 @@
     border: 0px solid red ;
 
   } 
+
+  #Stotal{
+    padding: 30px;
+    margin: 10px;
+  }
+  #Stotal>h3 {
+   text-align: center;
+  }
+
+  #Stotal>p {
+    text-align: center;
+   }
+  #Scheck_btn{
+    padding: 10px 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    background-color: coral;
+    text-align: center;
+    font-weight: bold;
+    margin: 30px;
+  }
+
+  #Scheck_btn:hover{
+    background-color: rgb(113, 181, 113);
+    border: 2px solid  cornflowerblue;
+    color:black
+  }
  

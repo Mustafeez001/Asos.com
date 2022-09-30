@@ -1,0 +1,66 @@
+#card_details{
+    width: 50%;
+    margin: auto;
+    padding: 1%;
+
+    border:2px solid black;
+    margin-top: 100px;
+}
+#card_details label {
+    font-size: 20px;
+
+}
+
+#card_number{
+    width: 50%;
+    padding: 15px 20px;
+    margin: 10px;
+    font-size: 15px;
+}
+
+#card_name{
+    width: 50%;
+    padding: 15px 20px;
+    margin: 10px;
+    font-size: 15px;
+}
+
+#ccv{
+    width: 50px;
+    padding: 10px 15px;
+    margin: 10px;
+    font-size: 15px;
+}
+
+#Smonth{
+    width: 50px;
+  
+    margin: 10px;
+ 
+
+}
+#Syear{
+    width: 50px;
+   
+    margin: 10px;
+   
+
+}
+
+#Splace_order{
+    width: 100%;
+    padding: 15px 0px;
+    background-color: greenyellow;
+    color: aliceblue;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+#Splace_order:hover{
+   border: 2px solid rebeccapurple;
+   background-color: rgb(227, 202, 202);
+   color: blue;
+    
+}
