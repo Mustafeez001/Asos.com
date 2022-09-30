@@ -1,3 +1,7 @@
+#Saddress {
+    padding-top: 100px;
+}
+
 #address_data{
     width: 40%;
     padding: 10px;
@@ -7,7 +11,7 @@
     padding-left: 140px;
 }
 #address_data>input {
- width:50% ;
+ width:80% ;
  margin: auto;
  padding: 10px 20px;
  margin-top: 15px;
@@ -44,6 +48,7 @@ label{
 .Sdiv_btn{
     display: flex;
     justify-content: space-between;
+    margin-top: 50px;
 }
 
 .Sdiv_btn>button:nth-child(1) {
