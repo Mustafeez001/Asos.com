@@ -19,8 +19,8 @@ const data = async () => {
         let data = await res.json()
         // console.log(data.results);
         let final_data = data.results
-        // console.log(final_data);
-        display(final_data)
+         console.log(final_data);
+       display(final_data)
     } catch (error) {
         console.log(error);
     }
@@ -70,7 +70,7 @@ const display = (data) => {
 
 let buttonSearch = document.getElementById("Tsearch");
 buttonSearch.addEventListener("click", function () {
-    display  ()
+    data  ()
 })
 
 

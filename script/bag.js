@@ -1,4 +1,10 @@
+import navbar from "../components/navbar.js";
+let nav= document.getElementById("navbar")
+nav.innerHTML=navbar()
 
+import footer from "../components/footer.js";
+let foot=document.getElementById("footer");
+foot.innerHTML=footer();
 
 const appendBagData=()=>{
     let SbagData=document.getElementById('SbagData');
@@ -22,14 +28,14 @@ const appendBagData=()=>{
         bun.innerText = "price 30$";
         const heading = document.createElement("h5");
         heading.innerText = el.alt_description;
-        let qty_btn=document.createElement('select');
+       // let qty_btn=document.createElement('select');
         
        
       
 
         let Sdiv=document.createElement('div');
         Sdiv.setAttribute('class','SDiv')
-        Sdiv.append(bun,heading,qty_btn);
+        Sdiv.append(bun,heading);
         div.append(div_img,Sdiv)
         SbagData.append(div)
 
@@ -39,3 +45,17 @@ const appendBagData=()=>{
 
 }
 appendBagData()
+
+let data= JSON.parse(localStorage.getItem('count'))
+let total_items=document.getElementById('total_items');
+total_items.innerHTML=data
+
+let Sprice=JSON.parse(localStorage.getItem('price'));
+
+let total_price=document.getElementById('total_price');
+total_price.innerHTML=`${Sprice}$`;
+
+let Scheck_btn=document.getElementById('Scheck_btn');
+Scheck_btn.addEventListener('click',()=>{
+    window.location.href='../index/address.html'
+})

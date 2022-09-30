@@ -1,0 +1,51 @@
+#Scontainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    /* border: 4px solid yellow; */
+    padding: 30px;
+    width: 90%;
+    margin: auto;
+}
+
+#Tcard {
+    /* border:  1px solid green ; */
+    padding: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+
+}
+
+.Tproimg {
+    width: 250px;
+    height: 280px;
+    /* border: 1px solid red; */
+}
+.SDiv{
+    display: flex;
+    justify-content:space-between;
+}
+.Slove{
+    width:50px ;
+}
+
+.Slove:hover {
+border: 2px solid green;
+color: brown;
+border-radius: 50%;
+padding: 5px;
+
+
+}
+
+@media only screen and (max-width: 768px) {
+    #Scontainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media only screen and (max-width: 320px) {
+        #Scontainer {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

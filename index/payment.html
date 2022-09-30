@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="../styles/payment.css">
+   <link rel="stylesheet" href="../styles/navbar.css">
+   <link rel="stylesheet" href="../styles/footer.css">
+  
+</head>
+<body>
+    <div id="navbar"></div>
+   <div id="card_details">
+    <h2>ADD CREDIT/DEBIT CARD </h2>
+    <label for="card number"> CARD NUMBER</label><br>
+    <input type="number" name="" id="card_number" placeholder="7896-4563-1230" ><br>
+    <label for="expiry date"> EXPIRY DATE</label><br>
+    <select name="" id="Smonth">
+        <option value="">Month</option>
+        <option value="jan">JAN</option>
+        <option value="feb">FEB</option>
+        <option value="mar">MARCH</option>
+        <option value="april">APRIL</option>
+        <option value="may">MAY</option>
+        <option value="june">JUNE</option>
+        <option value="july">JULY</option>
+        <option value="aug">AUG</option>
+        <option value="sep">SEP</option>
+        <option value="oct">OCT</option>
+        <option value="nov">NOV</option>
+        <option value="dec">DEC</option>
+    </select>
+    <select name="" id="Syear" >
+        <option value="">Year</option>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+        <option value="2024">2024</option>
+        <option value="2025">2025</option>
+        <option value="2026">2026</option>
+        <option value="2027">2027</option>
+        <option value="2028">2028</option>
+        <option value="2029">2029</option>
+        <option value="2030">2030</option>
+        <option value="2031">2031</option>
+    </select><br>
+    <label for="name"> NAME ON CARD</label><br>
+    <input type="text" name="" id="card_name" placeholder="Card Holder Name"><br>
+    <label for="ccv"> CCV</label><br>
+    <input type="password" name="" id="ccv" ><br>
+    <button id="Splace_order"> PLACE ORDER</button>
+   </div>
+   <div id="footer"></div>
+    
+</body>
+</html>
+<script type="module" src="../script/payment.js"></script>
