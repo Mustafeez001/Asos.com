@@ -14,3 +14,5 @@ Member 4 = fw19_0910 - Abhinav Bhaskar
 
 
 Live Site -------https://preeminent-liger-3155c0.netlify.app
+
+<img src="https://jayeshthakare98.github.io/images/Asos.com.png" alt="Girl in a jacket" width="800" height="600">
